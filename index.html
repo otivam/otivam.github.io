@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@4.2.0/dist/css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Merienda" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="master.css">
+    <meta charset="utf-8">
+    <title>otivam's portfolio</title>
+  </head>
+  <body>
+
+    <div class="container header">
+          <p><b>Hi, I'm</b></p><br>
+          <h2><b>GINCHO GEORGIEV</b></h2>
+          <h3>DEV & LAW</h3>
+      <div class="hiper-l">
+        <a href="https://www.linkedin.com/in/gincho-georgiev-a64670143/" target="_blank"><i class="h-icon ion-logo-linkedin"></i></a>
+        <a href="https://github.com/otivam?tab=repositories" target="_blank"><i class="h-icon ion-logo-github"></i></a>
+      </div>
+    </div>
+
+
+
+      <div class="container">
+        <button class="tablink one" onclick="openPage('Home', this, '#99e1e5')" id="defaultOpen"><i class="icon ion-md-home"></i> <span id="t1"><b>Home</b></span></button>
+        <button class="tablink two" onclick="openPage('Projects', this, '#AACFD0')"><i class="icon ion-md-clipboard"></i> <span id="t2"><b>Projects</b></span></button>
+        <button class="tablink three" onclick="openPage('Contact', this, '#8ab9ce')"><i class="icon ion-md-text"></i> <span id="t3"><b>Contact</b></span></button>
+        <button class="tablink four" onclick="openPage('About', this, '#79A8A9')"><i class="icon ion-md-warning"></i> <span id="t4"><b>About</b></span></button>
+
+        <div id="Home" class="tabcontent">
+          <img class="avatar" src="me.jpg" alt="Avatar img"><br><br>
+          <b><p>I’m a web designer and developer with a great passion for building new things from scratch.
+          <p>I live in the charming city of Sofia where I create beautiful websites.</p>
+          <p>After thousand of hours spend in learning different programming languages, I decided that JavaScript, CSS3 and HTML5 are what i like.</p>
+          <p>I love everything about tech, reading my books, and the snow in the winter.</p></b>
+          <p><a class="btn" href="https://drive.google.com/uc?authuser=0&id=1FS-hpmeP8u9DtiBkdT9gMVYVjwMPJDHq&export=download" target="_blank"><b>View my resume</b></a></p>
+        </div>
+
+        <div id="Projects" class="tabcontent">
+            <div class="row">
+              <div class="col-xl-3 col-md-6 box">
+                <div class="up-part">
+                  <a href="https://codepen.io/otivam/full/djYdpo/" target="_blank">
+                  <img src="rocket.jpg" alt="Sorry!" style="width:100%">
+                  <div class="down-part">
+                    <p><b>Launch the rocket</b></p>
+                  </div>
+                </a>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-md-6 box">
+                <div class="up-part">
+                  <a href="https://codepen.io/otivam/full/zjgYVL/" target="_blank">
+                  <img src="tic-tae.jpg" alt="Sorry!" style="width:100%">
+                  <div class="down-part">
+                    <p><b>Tic Tac Toe</b></p>
+                  </div>
+                </a>
+              </div>
+              </div>
+
+              <div class="col-xl-3 col-md-6 box">
+                <div class="up-part">
+                  <a href="https://codepen.io/otivam/full/Wyvydp/" target="_blank">
+                  <img src="silly.jpg" alt="Sorry!" style="width:100%">
+                  <div class="down-part">
+                    <p><b>Silly game</b></p>
+                  </div>
+                </a>
+              </div>
+              </div>
+
+              <div class="col-xl-3 col-md-6 box">
+                <div class="up-part">
+                  <a href="https://codepen.io/otivam/full/MXQJqJ/" target="_blank">
+                  <img src="pig.jpg" alt="Sorry!" style="width:100%">
+                  <div class="down-part">
+                    <p><b>Pig game</b></p>
+                  </div>
+                </a>
+              </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="Contact" class="tabcontent">
+
+        </div>
+
+        <div id="About" class="tabcontent">
+          <div class="row-about">
+            <div class="column-about">
+              <div class="card">
+                <img src="head.jpg" alt="Gincho" style="width:100%">
+                <div class="container-about"><br>
+                  <p class="title-about"><b>DEVELOPER &amp; LEGAL ADVISOR</b></p>
+                  <p><b>"Always looking for new challenges!"</b></p>
+                  <p><b><span id="email">gincho.georgiev.0.@gmail.com</span></b></p>
+                </div>
+              </div>
+            </div>
+            <div class="column-about">
+              <div class="card">
+                <div class="container-about">
+                  <p><b>Experienced Senior Software Engineer with a demonstrated history of working in the program development industry. Skilled in Python, HTML, Cascading Style Sheets(CSS), Microsoft Excel, Data Analysis and Quality Assurance.</b></p>
+                </div>
+              </div>
+            </div>
+            <div class="column-about">
+              <div class="card">
+                <div class="container-about">
+                  <h2>John Doe</h2>
+                  <p class="title">Designer</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>example@example.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      <script src="master.js">
+      </script>
+  </body>
+</html>

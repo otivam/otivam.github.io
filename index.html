@@ -4,29 +4,30 @@
     <link rel="stylesheet" href="https://unpkg.com/ionicons@4.2.0/dist/css/ionicons.min.css">
     <link href="https://fonts.googleapis.com/css?family=Cinzel|Merienda" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <link rel="stylesheet" href="master.css">
     <meta charset="utf-8">
     <title>otivam's portfolio</title>
   </head>
-  <body>
+  <body ng-app="myApp" ng-init="text1='Home';text2='Projects';text3='Edits';text4='About'" ng-controller="myCtrl" style="background-color:{{color2}};color:{{color1}}">
 
     <div class="container header">
           <p><b>Hi, I'm</b></p><br>
           <h2><b>GINCHO GEORGIEV</b></h2>
           <h3>DEV & LAW</h3>
       <div class="hiper-l">
-        <a href="https://www.linkedin.com/in/gincho-georgiev-a64670143/" target="_blank"><i class="h-icon ion-logo-linkedin"></i></a>
-        <a href="https://github.com/otivam?tab=repositories" target="_blank"><i class="h-icon ion-logo-github"></i></a>
+        <a href="https://www.linkedin.com/in/gincho-georgiev-a64670143/" target="_blank"><i style="color:{{color3}}" class="h-icon ion-logo-linkedin"></i></a>
+        <a href="https://github.com/otivam?tab=repositories" target="_blank"><i style="color:{{color3}}" class="h-icon ion-logo-github"></i></a>
       </div>
     </div>
 
 
 
       <div class="container">
-        <button class="tablink one" onclick="openPage('Home', this, '#99e1e5')" id="defaultOpen"><i class="icon ion-md-home"></i> <span id="t1"><b>Home</b></span></button>
-        <button class="tablink two" onclick="openPage('Projects', this, '#AACFD0')"><i class="icon ion-md-clipboard"></i> <span id="t2"><b>Projects</b></span></button>
-        <button class="tablink three" onclick="openPage('Contact', this, '#8ab9ce')"><i class="icon ion-md-text"></i> <span id="t3"><b>Contact</b></span></button>
-        <button class="tablink four" onclick="openPage('About', this, '#79A8A9')"><i class="icon ion-md-warning"></i> <span id="t4"><b>About</b></span></button>
+        <button class="tablink one" onclick="openPage('Home', this, '#99e1e5')" id="defaultOpen"><i class="icon ion-md-home"></i> <span id="t1"><b>{{text1}}</b></span></button>
+        <button class="tablink two" onclick="openPage('Projects', this, '#AACFD0')"><i class="icon ion-md-clipboard"></i> <span id="t2"><b>{{text2}}</b></span></button>
+        <button class="tablink three" onclick="openPage('Edits', this, '#8ab9ce')"><i class="icon ion-md-construct"></i> <span id="t3"><b>{{text3}}</b></span></button>
+        <button class="tablink four" onclick="openPage('About', this, '#79A8A9')"><i class="icon ion-md-warning"></i> <span id="t4"><b>{{text4}}</b></span></button>
 
         <div id="Home" class="tabcontent">
           <img class="avatar" src="me.jpg" alt="Avatar img"><br><br>
@@ -34,7 +35,7 @@
           <p>I live in the charming city of Sofia where I create beautiful websites.</p>
           <p>After thousand of hours spend in learning different programming languages, I decided that JavaScript, CSS3 and HTML5 are what i like.</p>
           <p>I love everything about tech, reading my books, and the snow in the winter.</p></b>
-          <p><a class="btn" href="https://drive.google.com/uc?authuser=0&id=1FS-hpmeP8u9DtiBkdT9gMVYVjwMPJDHq&export=download" target="_blank"><b>View my resume</b></a></p>
+          <p><a class="btn card" href="https://drive.google.com/uc?authuser=0&id=1FS-hpmeP8u9DtiBkdT9gMVYVjwMPJDHq&export=download" target="_blank"><b>View my resume</b></a></p>
         </div>
 
         <div id="Projects" class="tabcontent">
@@ -85,8 +86,43 @@
             </div>
         </div>
 
-        <div id="Contact" class="tabcontent">
-
+        <div id="Edits" class="tabcontent">
+          <div class="row-edits">
+            <div class="column-edits">
+              <fieldset>
+                <legend>Choose some monster colors</legend>
+                  <div class="one-line">
+                    <input ng-model="color1" type="color" id="text" name="color">
+                      <label for="text"><b>Text</b></label>
+                    </div>
+                    <div class="one-line">
+                      <input ng-model="color2" type="color" id="body" name="color">
+                      <label for="body"><b>Body</b></label>
+                    </div>
+                    <div class="one-line">
+                      <input ng-model="color3" type="color" id="icon" name="color">
+                      <label for="icon"><b>Icon</b></label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="column-edits">
+              <fieldset>
+                <legend>Choose the heading</legend>
+                  <div>
+                    <input type="text" ng-model="text1">
+                  </div>
+                  <div>
+                    <input type="text" ng-model="text2">
+                  </div>
+                  <div>
+                    <input type="text" ng-model="text3">
+                  </div>
+                  <div>
+                    <input type="text" ng-model="text4">
+                  </div>
+                </fieldset>
+            </div>
+          </div>
         </div>
 
         <div id="About" class="tabcontent">
@@ -104,17 +140,14 @@
             <div class="column-about">
               <div class="card">
                 <div class="container-about">
-                  <p><b>Experienced Senior Software Engineer with a demonstrated history of working in the program development industry. Skilled in Python, HTML, Cascading Style Sheets(CSS), Microsoft Excel, Data Analysis and Quality Assurance.</b></p>
+                  <p><b>some text goes here...</b></p>
                 </div>
               </div>
             </div>
             <div class="column-about">
               <div class="card">
                 <div class="container-about">
-                  <h2>John Doe</h2>
-                  <p class="title">Designer</p>
-                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                  <p>example@example.com</p>
+                  <p><b>some more text...</b></p>
                 </div>
               </div>
             </div>

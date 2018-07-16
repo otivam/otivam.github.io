@@ -1,3 +1,4 @@
+//SPA (single page app)
 function openPage(pageName, elmnt, color) {
 
     var i, tabcontent, tablinks;
@@ -19,3 +20,9 @@ function openPage(pageName, elmnt, color) {
 }
 
 document.getElementById("defaultOpen").click();
+
+
+//Angular Controller
+var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+});

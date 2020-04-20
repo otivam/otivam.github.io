@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Court orders archive!</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="jumbotron">
+
+        <div class="button btn-primary" onclick="openForm()">
+          Добави
+        </div>
+
+        <div class="button btn-primary">
+          Редактирай
+        </div>
+        <div class="button btn-primary">
+          Изтрий
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <h2>Обжалване действията на съдебните изпълнители</h2>
+        <div class="col-sm-2">
+          <div class="dropdown" id="sections">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Избери раздел
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li id="button_sec_1" onclick="hide_show(this.id)"><a href="#">PLACEHOLDER#1</a></li>
+              <li id="button_sec_2" onclick="hide_show(this.id)"><a href="#">PLACEHOLDER#2</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <input class="form-control" id="myInput" type="text" placeholder="Търси...">
+        </div>
+      </div>
+
+
+
+
+        <div id="myOverlay" class="overlay">
+          <div class="overlay-content">
+          </div>
+        </div>
+
+
+        <div class="form-popup" id="myForm">
+          <form method="post" action="db_connection.php" class="form-container">
+
+            <input name="vid_dokument" type="text" placeholder="Вид документ...">
+
+            <input type="submit" value="Submit">
+
+            <button type="button" class="btn" onclick="saveSection()">Запази</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Откажи</button>
+          </form>
+        </div>
+
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Вид документ</th>
+            <th>Съд</th>
+            <th>Номер на документа</th>
+            <th>Влязло в сила на дата</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody id="section_1">
+            <tr>
+              <td>Определение</td>
+              <td>Хасковският окръжен съд</td>
+              <td>971</td>
+              <td>17.12.2018г.</td>
+              <td><a href="resources/804c1718.htm" target="_blank">Виж</a></td>
+            </tr>
+            <tr>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+              <td>TEST</td>
+              <td><a href="resources/804c1718.htm" target="_blank">Виж</a></td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr id="section_2">
+              <td>Решение</td>
+              <td>Хасковският окръжен съд</td>
+              <td>27</td>
+              <td>24.01.2019г.</td>
+              <td><a href="http://okrsud.haskovo.net/sprweb/0063d819/03312419.htm" target="_blank">Виж</a></td>
+            </tr>
+          </tbody>
+
+      </table>
+    </div>
+
+
+
+
+
+    <script src="master_orders.js"></script>
+  </body>
+</html>

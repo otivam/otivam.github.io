@@ -14,8 +14,19 @@ body, html {
   font-family: HSGrotesk;
   font-size: 20px!important;
 }
+.one {background-color: #f76262;}
+.two {background-color: #216583;}
+.three {background-color: #65c0ba;}
+.four {background-color: #cffdf8;}
+
+
+#Home {background-color: #f76262;}
+#Projects {background-color: #216583;}
+#Edits {background-color: #65c0ba;}
+#About {background-color: #cffdf8;}
+
+
 .tablink {
-  background-color: black;
   color: white;
   float: left;
   border: none;
@@ -33,6 +44,7 @@ button:focus {outline:0;}
   color: rgb(21, 55, 112);
   display: none;
   padding: 100px 20px;
+  padding-bottom: 20px;
   height: 100%;
 }
 .box {
@@ -43,10 +55,7 @@ button:focus {outline:0;}
       display:none;
     }
 }
-#Home {background-color: #99e1e5;}
-#Projects {background-color: #AACFD0;}
-#Edits {background-color: #8ab9ce;}
-#About {background-color: #79A8A9;}
+
 
 i {
   display: inline-block;
@@ -77,6 +86,7 @@ div.up-part {
 div.down-part {
   padding: 10px;
   color: rgb(21, 55, 112);
+  background-color: white
 }
 a:hover, a:visited, a:link, a:active {text-decoration: none;}
 .column-about {
